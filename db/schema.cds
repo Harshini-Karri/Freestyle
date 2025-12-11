@@ -12,17 +12,27 @@ aspect secondary : managed, cuid {}
 // Type Declarations
 // ============================================
 
+// type addresses {
+//   vm_street  : String(30) default 'LA Street, L-245 California, NYC, US';
+//   vm_city    : String(10) default 'New York';
+//   vm_state   : String(10) default 'Rajasthan';
+//   vm_country : String(6)  default 'India';
+//   vm_postal  : String(10) default '352056';
+// }
+
 type addresses {
-  vm_street  : String(30) default 'LA Street, L-245 California, NYC, US';
-  vm_city    : String(10) default 'New York';
-  vm_state   : String(10) default 'Rajasthan';
-  vm_country : String(6)  default 'India';
-  vm_postal  : String(10) default '352056';
+  vm_street  : String(60);
+  vm_city    : String(20);
+  vm_state   : String(20);
+  vm_country : String(20);
+  vm_postal  : String(10);
 }
 
+
+
 type material_type {
-  raw_material : String(15) default 'Steel Set A CSGN';
-  material_srv : String(2)  default 'MA';
+  raw_material : String(50) default 'Steel Set A CSGN';
+  material_srv : String(5)  default 'MA';
   other        : String(255);
 }
 
@@ -56,11 +66,11 @@ type post_aspect {
 }
 
 type audit_aspect {
-  auditby    : String(10);
+  auditby    : String(30);
   auditat    : DateTime;
-  verifiedby : String(10);
+  verifiedby : String(30);
   verifiedat : DateTime;
-  approvedby : String(10);
+  approvedby : String(30);
   approvedat : DateTime;
 }
 
@@ -132,7 +142,7 @@ entity vendormaster : primary {
 
   @title : 'Payment Terms'
   @Common.Label : 'Payment Terms'
-  vm_payments : String(6) default '30 days';
+  vm_payments : String(10) default '30 days';
 
   @title : 'Active Status'
   @Common.Label : 'Active Status'
@@ -210,7 +220,7 @@ entity poheader : primary {
   @Common.Label : 'PO Number'
   @mandatory
   @assert.range : [ 1, 9999999999 ]
-  po_number : Integer not null;
+  po_number : Integer64 not null;
 
   @title : 'Vendor ID'
   @Common.Label : 'Vendor ID'
@@ -487,7 +497,7 @@ entity inv_header : primary {
 
   @title : 'Reference PO Number'
   @Common.Label : 'Reference PO Number'
-  inv_header_refpo : Integer;
+  inv_header_refpo : Integer64;
 
   @title : 'GR Number'
   @Common.Label : 'GR Number'
@@ -624,11 +634,11 @@ entity audit : secondary {
 
   @title : 'Error Status'
   @Common.Label : 'Error Status'
-  error_status : String(10) default '404';
+  error_status : String(30) default '404';
 
   @title : 'Audit Status'
   @Common.Label : 'Audit Status'
-  audit_status : String(10) default 'Unchanged';
+  audit_status : String(50) default 'Unchanged';
 
   @title : 'Audit Log'
   @Common.Label : 'Audit Log'
