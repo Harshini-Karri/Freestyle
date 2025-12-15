@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.ust.purchaseorders.controller.POHeader"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Purchase Orders">
+        <content>
+            <Table items="{path : '/poheader'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="PO Header" level="H2"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column><Text text="PO ID"/></Column>
+                    <Column><Text text="number"/></Column>
+                    <Column><Text text="vendorid"/></Column>
+                    <Column><Text text="vendor"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{po_id}"/>
+                            <Text text="{po_number}"/>
+                            <Text text="{po_vm_id}"/>
+                            <Text text="{vendor}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.ust.purchaseorders.controller.Material"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Material Master">
+        <content>
+            <Table items="{path : '/mastermaterial'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Material Master" level="H2"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column><Text text="Material ID"/></Column>
+                    <Column><Text text="code"/></Column>
+                    <Column><Text text="Description"/></Column>
+                    <Column><Text text="types"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{mm_id}"/>
+                            <Text text="{mm_code}"/>
+                            <Text text="{mm_desc}"/>
+                            <Text text="{mm_types}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

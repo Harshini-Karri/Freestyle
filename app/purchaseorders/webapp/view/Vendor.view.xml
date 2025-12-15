@@ -1,0 +1,34 @@
+<mvc:View controllerName="com.ust.purchaseorders.controller.Vendor"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page title="Vendor Master">
+        <content>
+            <Table items="{path : '/vendormaster'}">
+                <headerToolbar>
+                    <Toolbar>
+                        <Title text="Vendor Master" level="H2"/>
+                    </Toolbar>
+                </headerToolbar>
+
+                <columns>
+                    <Column><Text text="Vendor ID"/></Column>
+                    <Column><Text text="Name"/></Column>
+                    <Column><Text text="Person"/></Column>
+                    <Column><Text text="Email"/></Column>
+                </columns>
+
+                <items>
+                    <ColumnListItem>
+                        <cells>
+                            <Text text="{vm_id}"/>
+                            <Text text="{vm_firstname}"/>
+                            <Text text="{vm_person}"/>
+                            <Text text="{vm_email}"/>
+                        </cells>
+                    </ColumnListItem>
+                </items>
+            </Table>
+        </content>
+    </Page>
+</mvc:View>

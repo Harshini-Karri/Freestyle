@@ -1,0 +1,56 @@
+<mvc:View
+    controllerName="com.ust.purchaseorders.controller.card"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+
+    <Page id="cardPage" title="Purchase Order Dashboard">
+        <content>
+
+            <FlexBox wrap="Wrap">
+
+                <GenericTile class="sapUiTinyMargin"
+                    header="Vendor"
+                    subheader="Vendor Master"
+                    press="goVendor">
+                </GenericTile>
+
+                <GenericTile class="sapUiTinyMargin"
+                    header="Material"
+                    subheader="Material Master"
+                    press="goMaterial">
+                    
+                </GenericTile>
+
+                <GenericTile class="sapUiTinyMargin"
+                    header="PO Header"
+                    subheader="Purchase Orders"
+                    press="goPOHeader">
+                </GenericTile>
+
+                <GenericTile class="sapUiTinyMargin"
+                    header="PO Items"
+                    subheader="Line Items"
+                    press="goPOItem">
+                    
+                </GenericTile>
+                <GenericTile class="sapUiTinyMargin"
+                    header="Invoice"
+                    subheader="Invoice Overview"
+                    press="goInvoice">
+                    
+                </GenericTile>
+                <GenericTile class="sapUiTinyMargin"
+                    header="Goods Receipts"
+                    subheader="Goods Receipt Overview"
+                    press="goGRHeader">
+                    
+                </GenericTile>
+
+                
+
+            </FlexBox>
+
+        </content>
+    </Page>
+    <Text text="hello world"></Text>
+</mvc:View>

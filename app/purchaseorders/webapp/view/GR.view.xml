@@ -1,0 +1,25 @@
+<mvc:View controllerName="com.ust.purchaseorders.controller.GR"
+ xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+ <Page title="Goods Receipt" showNavButton="true" navButtonPress="onBack">
+  <content>
+   <Table items="{path : '/gr_header'}">
+    <columns>
+    <Column><Text text="GR_id"/></Column>
+    <Column><Text text="GR No"/></Column>
+     <Column><Text text="PO ID"/></Column>
+     <Column><Text text="Status"/></Column>
+    </columns>
+    <items>
+     <ColumnListItem>
+      <cells>
+      <Text text="{gr_id}"/>
+      <Text text="{gr_number}"/>
+       <Text text="{gr_po}"/>
+       <Text text="{gr_status}"/>
+      </cells>
+     </ColumnListItem>
+    </items>
+   </Table>
+  </content>
+ </Page>
+</mvc:View>

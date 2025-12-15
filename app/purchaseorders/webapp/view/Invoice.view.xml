@@ -1,0 +1,25 @@
+<mvc:View controllerName="com.ust.purchaseorders.controller.Invoice"
+ xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m">
+ <Page title="Invoices" showNavButton="true" navButtonPress="onBack">
+  <content>
+   <Table items="{path : '/inv_header'}">
+    <columns>
+    <Column><Text text="Invoiceheader_id"/></Column>
+    <Column><Text text="Invoiceven_id"/></Column>
+     <Column><Text text="Invoice No"/></Column>
+     <Column><Text text="Status"/></Column>
+    </columns>
+    <items>
+     <ColumnListItem>
+      <cells>
+      <Text text="{inv_header_id}"/>
+      <Text text="{inv_header_vendor_id}"/>
+       <Text text="{inv_header_invnumber}"/>
+       <Text text="{inv_header_status}"/>
+      </cells>
+     </ColumnListItem>
+    </items>
+   </Table>
+  </content>
+ </Page>
+</mvc:View>
