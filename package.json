@@ -20,7 +20,8 @@
     "watch-invh": "cds watch --open invh/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-gcr": "cds watch --open gcr/index.html?sap-ui-xx-viewCache=false --livereload false",
     "watch-aud": "cds watch --open aud/index.html?sap-ui-xx-viewCache=false --livereload false",
-    "watch-auds": "cds watch --open auds/index.html?sap-ui-xx-viewCache=false --livereload false"
+    "watch-auds": "cds watch --open auds/index.html?sap-ui-xx-viewCache=false --livereload false",
+    "watch-purchaseorders": "cds watch --open com.ust.purchaseorders/index.html?sap-ui-xx-viewCache=false --livereload false"
   },
   "private": true,
   "workspaces": [
@@ -36,17 +37,6 @@
     "app/aud",
     "app/aud",
     "app/auds"
-  ],
-  "cds": {
-    "requires": {
-      "db": {
-        "kind": "sqlite"
-      },
-      "[production]": {
-        "db": {
-          "kind": "hana"
-        }
-      }
-    }
-  }
+  ]
+  
 }
