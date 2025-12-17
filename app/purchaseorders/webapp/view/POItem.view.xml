@@ -15,7 +15,7 @@
                     <Column><Text text="PO ID"/></Column>
                     <Column><Text text="lineitemnumber"/></Column>
                     <Column><Text text="mat_id"/></Column>
-                    <Column><Text text="materials"/></Column>
+                    <Column><Text text="Discount"/></Column>
                 </columns>
 
                 <items>
@@ -24,7 +24,7 @@
                             <Text text="{po_id}"/>
                             <Text text="{po_lineitem_number}"/>
                             <Text text="{po_item_material_id}"/>
-                            <Text text="{ po_item_materials }"/>
+                            <Text text="{po_item_discount}"/>
                         </cells>
                     </ColumnListItem>
                 </items>
