@@ -15,7 +15,7 @@
                     <Column><Text text="Material ID"/></Column>
                     <Column><Text text="code"/></Column>
                     <Column><Text text="Description"/></Column>
-                    <Column><Text text="types"/></Column>
+                    <Column><Text text="price"/></Column>
                 </columns>
 
                 <items>
@@ -24,7 +24,7 @@
                             <Text text="{mm_id}"/>
                             <Text text="{mm_code}"/>
                             <Text text="{mm_desc}"/>
-                            <Text text="{mm_types}"/>
+                            <Text text="{mm_stdprice}"/>
                         </cells>
                     </ColumnListItem>
                 </items>
